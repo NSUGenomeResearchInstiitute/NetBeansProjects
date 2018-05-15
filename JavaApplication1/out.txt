@@ -1,0 +1,84 @@
+MICROBIOLOGICAL REPORT*M1512000443* *11512000953*
+S - Sensitive I - Intermediate Sensitive R - Resistant
+PROF. DR. MD. MOYEZ UDDIN
+RINGKU on 31/03/2018 03:50:52 PM::Print by &  Date 
+Barnaba Ringku Drong
+Medical Technologist
+MBBS, D. Bact, M.Phil (Microbiology)
+WHO Trainded (UK, Japan, Thailand, India)
+Dhaka Central Intl Medical College & Hospital
+Checked by
+Amikacin
+Amoxycillin
+Amoxyclave
+Azithromycin
+Aztreonam
+Cefaclor
+Cefepime
+Cefixime
+Cefotaxime
+Cefoxitin
+Ceftazidime
+Ceftriaxone
+Cefuroxime
+Cephradine
+Chloramphenicol
+Ciprofloxacin
+Cloxacillin
+Colistin
+Co-trimoxazole
+Doxycycline
+Erythromycin
+Gentamicin
+Imipenem
+Levofloxacin
+Linezolid
+Mecillinam
+Meropenem
+Nalidixic Acid
+Neomycin
+Netilmicin
+Nitrofurantoin
+Penicillin
+Piperacillin
+Piperacillin/Tazobactum
+Polymyxin B
+Tetracycline
+R
+S
+R
+S
+S
+R
+R
+S
+S
+S
+ Y 9 MAge Female
+M1512000443Invoice No 05/12/15
+MANHA Patient Name
+PROF. DR. HELENA BEGUM  MBBS, FCPS (Paed).Referred By
+:
+:
+:
+Esch. coli. aerobically at 37 degree C of incubation. (Serotyping not done) 
+ 
+ORGANISM ISOLATED: A
+B
+ANTIBIOGRAM OF ORGANISM ISOLATED
+STOOLSample STOOL FOR C/STests
+ANTIBIOTIC A B
+PATERN
+11512000953Report No 08/12/15
+ LAB No 11512000670
+:
+:
+:
+ANTIBIOTIC A B
+PATERN
+ANTIBIOTIC A B
+PATERN
+Gender
+Invoice Date : Delivery Date :
+:
+ Bed :

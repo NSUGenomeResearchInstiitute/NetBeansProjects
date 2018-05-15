@@ -1,0 +1,93 @@
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.text.PDFTextStripper;
+public class ReadingText {
+
+   public static void main(String args[]) throws IOException {
+
+      //Loading an existing document
+      File file = new File("C:/PdfBox_Examples/new.pdf");
+      PDDocument document = PDDocument.load(file);
+
+      //Instantiate PDFTextStripper class
+      PDFTextStripper pdfStripper = new PDFTextStripper();
+
+      //Retrieving text from PDF document
+      String text = pdfStripper.getText(document);
+      System.out.println(text);
+
+      //Closing the document
+      document.close();
+
+   }
+}
+
+
+using pdfbox
+
+
+import java.io.*;
+import org.apache.pdfbox.pdmodel.*;
+import org.apache.pdfbox.util.*;
+
+public class PDFTest {
+
+ public static void main(String[] args){
+ PDDocument pd;
+ BufferedWriter wr;
+ try {
+         File input = new File("C:\\Invoice.pdf");  // The PDF file from where you would like to extract
+         File output = new File("C:\\SampleText.txt"); // The text file where you are going to store the extracted data
+         pd = PDDocument.load(input);
+         System.out.println(pd.getNumberOfPages());
+         System.out.println(pd.isEncrypted());
+         pd.save("CopyOfInvoice.pdf"); // Creates a copy called "CopyOfInvoice.pdf"
+         PDFTextStripper stripper = new PDFTextStripper();
+         wr = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(output)));
+         stripper.writeText(pd, wr);
+         if (pd != null) {
+             pd.close();
+         }
+        // I use close() to flush the stream.
+        wr.close();
+ } catch (Exception e){
+         e.printStackTrace();
+        } 
+     }
+}
+
+
+
+using iText
+
+
+package com.codingsec;
+ 
+import java.io.IOException;
+ 
+//iText imports
+import com.itextpdf.text.pdf.PdfReader;
+import com.itextpdf.text.pdf.parser.PdfTextExtractor;
+ 
+public class iTextReadDemo {
+ 
+ 
+    public static void main(String[] args) {
+        try {
+             
+            PdfReader reader = new PdfReader("c:/temp/test.pdf");
+            System.out.println("This PDF has "+reader.getNumberOfPages()+" pages.");
+            String page = PdfTextExtractor.getTextFromPage(reader, 2);
+            System.out.println("Page Content:\n\n"+page+"\n\n");
+            System.out.println("Is this document tampered: "+reader.isTampered());
+            System.out.println("Is this document encrypted: "+reader.isEncrypted());
+ 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+ 
+    }
+ 
+}

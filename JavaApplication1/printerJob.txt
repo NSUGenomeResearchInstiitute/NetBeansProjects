@@ -1,0 +1,155 @@
+
+Save This Page
+Home » pdfbox-1.1.0-src » org.apache.pdfbox » [javadoc | source]
+
+    1   /*
+    2    * Licensed to the Apache Software Foundation (ASF) under one or more
+    3    * contributor license agreements.  See the NOTICE file distributed with
+    4    * this work for additional information regarding copyright ownership.
+    5    * The ASF licenses this file to You under the Apache License, Version 2.0
+    6    * (the "License"); you may not use this file except in compliance with
+    7    * the License.  You may obtain a copy of the License at
+    8    *
+    9    *      http://www.apache.org/licenses/LICENSE-2.0
+   10    *
+   11    * Unless required by applicable law or agreed to in writing, software
+   12    * distributed under the License is distributed on an "AS IS" BASIS,
+   13    * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   14    * See the License for the specific language governing permissions and
+   15    * limitations under the License.
+   16    */
+   17   package org.apache.pdfbox;
+   18   
+   19   import java.awt.print.PrinterJob;
+   20   
+   21   import javax.print.PrintService;
+   22   
+   23   import org.apache.pdfbox.pdmodel.PDDocument;
+   24   
+   25   /**
+   26    * This is a command line program that will print a PDF document.
+   27    *
+   28    * @author <a href="ben@benlitchfield.com">Ben Litchfield</a>
+   29    * @version $Revision: 1.4 $
+   30    */
+   31   public class PrintPDF
+   32   {
+   33   
+   34       private static final String PASSWORD     = "-password";
+   35       private static final String SILENT       = "-silentPrint";
+   36       private static final String PRINTER_NAME = "-printerName";
+   37   
+   38       /**
+   39        * private constructor.
+   40       */
+   41       private PrintPDF()
+   42       {
+   43           //static class
+   44       }
+   45   
+   46       /**
+   47        * Infamous main method.
+   48        *
+   49        * @param args Command line arguments, should be one and a reference to a file.
+   50        *
+   51        * @throws Exception If there is an error parsing the document.
+   52        */
+   53       public static void main( String[] args ) throws Exception
+   54       {
+   55           String password = "";
+   56           String pdfFile = null;
+   57           boolean silentPrint = false;
+   58           String printerName = null;
+   59           for( int i=0; i<args.length; i++ )
+   60           {
+   61               if( args[i].equals( PASSWORD ) )
+   62               {
+   63                   i++;
+   64                   if( i >= args.length )
+   65                   {
+   66                       usage();
+   67                   }
+   68                   password = args[i];
+   69               }
+   70               else if( args[i].equals( PRINTER_NAME ) )
+   71               {
+   72                   i++;
+   73                   if( i >= args.length )
+   74                   {
+   75                       usage();
+   76                   }
+   77                   printerName = args[i];
+   78               }
+   79               else if( args[i].equals( SILENT ) )
+   80               {
+   81                   silentPrint = true;
+   82               }
+   83               else
+   84               {
+   85                   pdfFile = args[i];
+   86               }
+   87           }
+   88   
+   89           if( pdfFile == null )
+   90           {
+   91               usage();
+   92           }
+   93   
+   94           PDDocument document = null;
+   95           try
+   96           {
+   97               document = PDDocument.load( pdfFile );
+   98   
+   99               if( document.isEncrypted() )
+  100               {
+  101                   document.decrypt( password );
+  102               }
+  103               PrinterJob printJob = PrinterJob.getPrinterJob();
+  104   
+  105               if(printerName != null )
+  106               {
+  107                   PrintService[] printService = PrinterJob.lookupPrintServices();
+  108                   boolean printerFound = false;
+  109                   for(int i = 0; !printerFound && i < printService.length; i++)
+  110                   {
+  111                       if(printService[i].getName().indexOf(printerName) != -1)
+  112                       {
+  113                           printJob.setPrintService(printService[i]);
+  114                           printerFound = true;
+  115                       }
+  116                   }
+  117               }
+  118   
+  119               if( silentPrint )
+  120               {
+  121                   document.silentPrint( printJob );
+  122               }
+  123               else
+  124               {
+  125                   document.print( printJob );
+  126               }
+  127           }
+  128           finally
+  129           {
+  130               if( document != null )
+  131               {
+  132                   document.close();
+  133               }
+  134           }
+  135       }
+  136   
+  137       /**
+  138        * This will print the usage requirements and exit.
+  139        */
+  140       private static void usage()
+  141       {
+  142           System.err.println( "Usage: java org.apache.pdfbox.PrintPDF [OPTIONS] <PDF file>\n" +
+  143               "  -password  <password>        Password to decrypt document\n" +
+  144               "  -silentPrint                 Print without prompting for printer info\n"
+  145               );
+  146           System.exit( 1 );
+  147       }
+  148   }
+
+Save This Page
+Home » pdfbox-1.1.0-src » org.apache.pdfbox » [javadoc | source]

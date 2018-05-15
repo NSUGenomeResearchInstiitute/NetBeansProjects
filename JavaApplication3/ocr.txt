@@ -1,0 +1,38 @@
+import java.io.File;
+ 
+import com.aspose.ocr.ILanguage;
+import com.aspose.ocr.Language;
+import com.aspose.ocr.OcrEngine;
+import com.aspose.ocr.ResourcesSource;
+ 
+public class ReadTextfrImage {
+    public static void main(String[] args) {
+ 
+        String imagePath = "E:\\workspace1.5\\Test.jpg";
+        String xmlEtalonFileName = "englishStandarts";
+        String fontCollectionFileName = "arialAndTimesAndCourierRegular.xml.bin";
+        String resourcesFilePath = "E:\\workspace1.5\\resources.zip";
+ 
+        // Create an instance of OcrEngine class but providing required
+        // parameters
+        OcrEngine ocr = new OcrEngine(ResourcesSource.BINARY_ZIP_FILE,
+                resourcesFilePath, xmlEtalonFileName, fontCollectionFileName);
+        ocr.getConfig().setNeedRotationCorrection(false);
+        File image = new File(imagePath);
+        ocr.setImage(image);
+ 
+        // Add language
+        ILanguage language = Language.load("english");
+        ocr.getLanguages().addLanguage(language);
+ 
+        // Perform OCR and get extracted text
+        try {
+            if (ocr.process()) {
+                System.out.println("\ranswer -> " + ocr.getText());
+ 
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}

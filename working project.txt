@@ -1,0 +1,13 @@
+Project 7, 12,14,15
+
+Project 16 is for single files in each folder
+
+Project 17 is for the whole folder
+
+project 18 is for whole folder with limited writing
+
+project 19 works fine for whole folders
+
+project 20 works exactly with multiple folders and correct output...
+
+Complete working project 21
