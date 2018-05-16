@@ -10,4 +10,4 @@ records = (r for r in SeqIO.parse(input_file, "fasta") if r.id in wanted)
 count = SeqIO.write(records, output_file, "fasta")
 print("Saved %i records from %s to %s" % (count, input_file, output_file))
 if count < len(wanted):
-print("Warning %i IDs not found in %s" % (len(wanted)-count, input_file))
+     print("Warning %i IDs not found in %s" % (len(wanted)-count, input_file))
