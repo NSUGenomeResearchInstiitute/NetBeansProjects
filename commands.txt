@@ -1,0 +1,97 @@
+gnuplot> plot 'daat.dat' using 1:2 pt 20 ps 25
+gnuplot> plot 'daat.dat' using 1:2 pt 10 ps 12
+gnuplot> plot 'daat.dat' using 1:2 pt 10 ps 12 with dots
+gnuplot> plot 'daat.dat' using 1:2 pt 7 ps 10 
+gnuplot> plot 'daat.dat' using 1:2 pt 2 ps 4 
+gnuplot> plot 'daat.dat' using 1:2 pt 7 ps 10 
+gnuplot> plot 'daat.dat' using 1:2 pt 2 ps 4
+gnuplot> plot 'daat.dat' using 1:2 pt 7 ps 4
+gnuplot> plot 'daat.dat' using 1:2 pt 7 ps 3
+plot 'alignchr.dat' using 1:2 with linepoints lw 3 title "AC"\
+
+plot 'alignchr.dat' using 1:2 with linepoints lw 3 title "AC", \
+>using 1:3 with linepoints lw 3 title "AG", \
+>using 1:4 with linepoints lw 3 title "AT", \
+>using 1:5 with linepoints lw 3 title "CA", \
+>using 1:6 with linepoints lw 3 title "CG", \
+>using 1:7 with linepoints lw 3 title "CT", \
+>using 1:8 with linepoints lw 3 title "GA", \
+>using 1:9 with linepoints lw 3 title "GC", \
+>using 1:10 with linepoints lw 3 title "GT", \
+>using 1:11 with linepoints lw 3 title "TA", \
+>using 1:12 with linepoints lw 3 title "TC", \
+>using 1:13 with linepoints lw 3 title "TG"
+                                                       ^
+         unrecognized plot type
+
+gnuplot> plot 'alignchr.dat' using 1:2 with linespoints lw 3 title "AC", \ using 1:3 with linespoints lw 3 title "AG", \ using 1:4 with linespoints lw 3 title "AT", \ using 1:5 with linespoints lw 3 title "CA", \ using 1:6 with linespoints lw 3 title "CG", \ using 1:7 with linespoints lw 3 title "CT", \ using 1:8 with linespoints lw 3 title "GA", \ using 1:9 with linespoints lw 3 title "GC", \ using 1:10 with linespoints lw 3 title "GT", \ using 1:11 with linespoints lw 3 title "TA", \ using 1:12 with linespoints lw 3 title "TC", \ using 1:13 with linespoints lw 3 title "TG"
+
+plot 'alignchr.dat' using 1:2 with linespoints lw 3 title "AC", using 1:3 with linespoints lw 3 title "AG", using 1:4 with linespoints lw 3 title "AT", using 1:5 with linespoints lw 3 title "CA", using 1:6 with linespoints lw 3 title "CG", using 1:7 with linespoints lw 3 title "CT", using 1:8 with linespoints lw 3 title "GA", using 1:9 with linespoints lw 3 title "GC", using 1:10 with linespoints lw 3 title "GT", using 1:11 with linespoints lw 3 title "TA", using 1:12 with linespoints lw 3 title "TC", using 1:13 with linespoints lw 3 title "TG"
+
+
+////////////////////////////////////////////////////
+
+
+plot 'alignchr.dat' using 1:2 with linespoints lw 3 title "AC", 	'' 	 using 1:3 with linespoints lw 3 title "AG", 	''	 using 1:4 with linespoints lw 3 title "AT", 	''	 using 1:5 with linespoints lw 3 title "CA", 	''	 using 1:6 with linespoints lw 3 title "CG", 	''	 using 1:7 with linespoints lw 3 title "CT", 	''	 using 1:8 with linespoints lw 3 title "GA", 	''	 using 1:9 with linespoints lw 3 title "GC", 	''	 using 1:10 with linespoints lw 3 title "GT", 	''	 using 1:11 with linespoints lw 3 title "TA", 	''	 using 1:12 with linespoints lw 3 title "TC", 	''	 using 1:13 with linespoints lw 3 title "TG"
+
+////////////////////////////////////////////////////
+
+
+gnuplot> plot 'alignchr.dat' using 1:2 with linespoints lw 3 title "AC", ''  using 1:3 with linespoints lw 3 title "AG", '' using 1:4 with linespoints lw 3 title "AT", '' using 1:5 with linespoints lw 3 title "CA", '' using 1:6 with linespoints lw 3 title "CG", '' using 1:7 with linespoints lw 3 title "CT", '' using 1:8 with linespoints lw 3 title "GA", '' using 1:9 with linespoints lw 3 title "GC", '' using 1:10 with linespoints lw 3 title "GT", '' using 1:11 with linespoints lw 3 title "TA", '' using 1:12 with linespoints lw 3 title "TC", '' using 1:13 with linespoints lw 3 title "TG"
+gnuplot> set xrange [0 : 40]
+gnuplot> plot 'alignchr.dat' using 1:2 with linespoints lw 3 title "AC", ''  using 1:3 with linespoints lw 3 title "AG", '' using 1:4 with linespoints lw 3 title "AT", '' using 1:5 with linespoints lw 3 title "CA", '' using 1:6 with linespoints lw 3 title "CG", '' using 1:7 with linespoints lw 3 title "CT", '' using 1:8 with linespoints lw 3 title "GA", '' using 1:9 with linespoints lw 3 title "GC", '' using 1:10 with linespoints lw 3 title "GT", '' using 1:11 with linespoints lw 3 title "TA", '' using 1:12 with linespoints lw 3 title "TC", '' using 1:13 with linespoints lw 3 title "TG"
+gnuplot> set xrange [0 : 35]
+gnuplot> plot 'alignchr.dat' using 1:2 with linespoints lw 3 title "AC", ''  using 1:3 with linespoints lw 3 title "AG", '' using 1:4 with linespoints lw 3 title "AT", '' using 1:5 with linespoints lw 3 title "CA", '' using 1:6 with linespoints lw 3 title "CG", '' using 1:7 with linespoints lw 3 title "CT", '' using 1:8 with linespoints lw 3 title "GA", '' using 1:9 with linespoints lw 3 title "GC", '' using 1:10 with linespoints lw 3 title "GT", '' using 1:11 with linespoints lw 3 title "TA", '' using 1:12 with linespoints lw 3 title "TC", '' using 1:13 with linespoints lw 3 title "TG"
+gnuplot> set xrange [0 : 30]
+gnuplot> set yrange [-0.05 : 0.2]
+gnuplot> plot 'alignchr.dat' using 1:2 with linespoints lw 3 title "AC", ''  using 1:3 with linespoints lw 3 title "AG", '' using 1:4 with linespoints lw 3 title "AT", '' using 1:5 with linespoints lw 3 title "CA", '' using 1:6 with linespoints lw 3 title "CG", '' using 1:7 with linespoints lw 3 title "CT", '' using 1:8 with linespoints lw 3 title "GA", '' using 1:9 with linespoints lw 3 title "GC", '' using 1:10 with linespoints lw 3 title "GT", '' using 1:11 with linespoints lw 3 title "TA", '' using 1:12 with linespoints lw 3 title "TC", '' using 1:13 with linespoints lw 3 title "TG"
+gnuplot>  clear
+gnuplot> plot 'daat.dat'
+gnuplot> set xrange [0 : 160]
+gnuplot> set yrang [-0.05 : 0.5]
+gnuplot> plot 'daat.dat'
+gnuplot> plot 'daat.dat' title "Gene Plot"
+
+
+unset title
+unset key
+unset xtics
+unset ytics
+unset ztics
+set border 0
+set hidden3d nooffset
+set parametric
+set angles degrees
+set samples 64,64
+set isosamples 13,13
+set mapping spherical
+set dummy u,v
+set urange [ -90.0000 : 90.0000 ] noreverse nowriteback
+set vrange [ 0.00000 : 360.000 ] noreverse nowriteback
+set style data line
+
+# Defines for gnuplot.rot script
+limit_iterations=72
+xrot=60
+xrot_delta = 0
+zrot=136
+zrot_delta = 355
+xview(xrot)=xrot
+zview(zrot)=zrot
+set view xview(xrot), zview(zrot), 1.5, 1
+set size square
+
+splot cos(u)*cos(v),cos(u)*sin(v),sin(u) notitle with lines lt 5, \
+      'world.dat' notitle with lines lt 2 lw 3
+
+iteration_count=0
+xrot =(xrot+xrot_delta)%360
+zrot =(zrot+zrot_delta)%360
+
+load "gnuplot.rot"
+
+
+///////////////////////////
+gnuplot> set yrange [ 0 : 0.5 ]
+gnuplot> plot 'daat.dat' lt rgb "black" title "Gene Plot"
+/////////////////////////
